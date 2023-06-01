@@ -29,4 +29,8 @@ Aplikasi yang saya buat yaitu **"Digital Library"** merupakan aplikasi perpustak
 - Membuat, mengedit, dan menghapus Member.
 
 ## Dokumentasi
-...
+
+https://github.com/MuhammadFahru/TP4DPBO2023C1/assets/59097913/09b31bee-3927-4ebe-a791-03fa5b65676d
+
+
+
