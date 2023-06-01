@@ -8,7 +8,6 @@
             $data_book = null;
 
             foreach($data['borrowing'] as $val){
-                $val;
                 $data_borrowing .= "<tr valign='middle'>
                         <td class='text-center'>" . $no++ . "</td>
                         <td class='text-start ps-3'>" . $val['member_name'] . "</td>
@@ -71,7 +70,6 @@
             $data_book = null;
 
             foreach($data['borrowing'] as $val){
-                $val;
                 $data_borrowing .= "<tr valign='middle'>
                         <td class='text-center'>" . $no++ . "</td>
                         <td class='text-start ps-3'>" . $val['member_name'] . "</td>

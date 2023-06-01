@@ -13,8 +13,12 @@ if (isset($_POST['add'])) {
     $id = $_GET['id_hapus'];
     $book->delete($id);
 } else if (!empty($_GET['id_edit'])) {
-    // memanggil function update
+    // memanggil function edit
     $id = $_GET['id_edit'];
+    $book->edit($id);
+} else if (isset($_POST['update']) && !empty($_GET['id_update'])) {
+    // memanggil function update
+    $id = $_GET['id_update'];
     $book->update($_POST, $id);
 } else{
     // memanggil function index

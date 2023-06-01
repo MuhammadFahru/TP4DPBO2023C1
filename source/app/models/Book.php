@@ -8,6 +8,13 @@ class Book extends DB
         return $this->execute($query);
     }
 
+    function getBookById($id)
+    {
+        $query = "SELECT books.*, categories.category_name AS category_name, authors.author_name AS author_name FROM books JOIN categories ON books.category_id = categories.category_id JOIN authors ON books.author_id = authors.author_id WHERE books.book_id = '$id'";
+
+        return $this->execute($query);
+    }
+
     function add($data)
     {
         $title = $data['title'];

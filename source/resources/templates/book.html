@@ -43,8 +43,89 @@
     </div>
     </nav>
     
+    <div class="container">
+        <h3 class="mb-5 mt-5 fw-bold">Daftar Buku</h3>
+        <div class="card shadow rounded p-4 mb-5">
+            <form method="POST" action="DATA_LINK" class="mb-3">
+                <div class="row">
+                    <div class="col-4 form-group mb-3">
+                        <label for="title" class="col-form-label">Judul</label>
+                        <input type="text" class="form-control" name="title" value="DATA_TITLE">
+                    </div>
+                    <div class="col-4 form-group mb-3">
+                        <label for="category_id" class="col-form-label">Kategori</label>
+                        <select class="form-select" name="category_id" required>
+                            <option selected>Pilih Kategori</option>
+                            CATEGORY_OPTIONS
+                        </select>
+                    </div>
+                    <div class="col-4 form-group mb-3">
+                        <label for="author_id" class="col-form-label">Penulis</label>
+                        <select class="form-select" name="author_id" required>
+                            <option selected>Pilih Penulis</option>
+                            AUTHOR_OPTIONS
+                        </select>
+                    </div>
+                    <div class="col-4 form-group mb-3">
+                        <label for="publication_date" class="col-form-label">Tanggal Publikasi</label>
+                        <input type="text" class="form-control datepicker" style="padding-left: 15px; padding-top: 7px; padding-bottom: 7px;" name="publication_date" value="DATA_PUBLICATION_DATE">
+                    </div>
+                    <div class="col-4 form-group mb-3">
+                        <label for="isbn" class="col-form-label">ISBN</label>
+                        <input type="text" class="form-control" name="isbn" value="DATA_ISBN">
+                    </div>
+                    <div class="col-4 form-group mb-3">
+                        <label for="availability" class="col-form-label">Availability</label>
+                        <input type="text" class="form-control" name="availability" value="DATA_AVAILABILITY">
+                    </div>
+                </div>
+                <div class="text-end">
+                    DATA_BUTTON
+                </div>
+            </form>
+            <table class="table table-bordered">
+                <thead>
+                    <tr class="text-center">
+                        <th width="80">No</th>
+                        <th>Judul</th>
+                        <th>Kategori</th>
+                        <th>Penulis</th>
+                        <th width="200">Tanggal Publikasi</th>
+                        <th width="150">ISBN</th>
+                        <th width="150">Availability</th>
+                        <th width="200">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    DATA_TABEL
+                </tbody>
+            </table>
+        </div>
+    </div>
+
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="assets/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" rel="stylesheet" />
+
+    <script>
+        $(".datepicker").datepicker({
+            format: 'yyyy-mm-dd'
+        });
+    </script>
+
+    <script type="text/javascript">
+        var elems = document.getElementsByClassName('confirmation');
+        var confirmIt = function (e) {
+            if (!confirm('Apakah Anda yakin untuk menghapus data ini?')) e.preventDefault();
+        };
+        for (var i = 0, l = elems.length; i < l; i++) {
+            elems[i].addEventListener('click', confirmIt, false);
+        }
+    </script>
 
 </body>
 </html>
