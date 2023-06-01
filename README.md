@@ -15,6 +15,10 @@ Bismillah Saya Muhammad Fahru Rozi [2108927] mengerjakan soal Tugas Praktikum 4 
 
 ![desain_db](https://github.com/MuhammadFahru/TP4DPBO2023C1/assets/59097913/bd44f5d6-a2b9-4bd2-b176-011dddbde890)
 
+## Struktur Folder MVC
+
+![struktur_folder](https://github.com/MuhammadFahru/TP4DPBO2023C1/assets/59097913/8c23772b-4cda-460f-a8d0-32a3f23a8333)
+
 ## Alur Program
 ...
 
